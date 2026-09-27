@@ -13,7 +13,8 @@ export default function StudentForm() {
     age: '',
     course: '',
     gender: 'Male',
-    location: ''
+    location: '',
+    phoneNumber: ''
   });
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
@@ -82,9 +83,15 @@ export default function StudentForm() {
             </div>
           </div>
 
-          <div className="form-group">
-            <label className="form-label">Course</label>
-            <input type="text" name="course" className="form-input" required value={form.course} onChange={handleChange} />
+          <div className="grid grid-cols-2">
+            <div className="form-group">
+              <label className="form-label">Course</label>
+              <input type="text" name="course" className="form-input" required value={form.course} onChange={handleChange} />
+            </div>
+            <div className="form-group">
+              <label className="form-label">Phone Number</label>
+              <input type="number" name="phoneNumber" className="form-input" required value={form.phoneNumber} onChange={handleChange} />
+            </div>
           </div>
 
           <div className="grid grid-cols-2">
