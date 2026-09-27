@@ -3,6 +3,10 @@ import Signup from './pages/Signup';
 import StudentList from './pages/StudentList';
 import StudentForm from './pages/StudentForm';
 import { UserPlus, LayoutDashboard } from 'lucide-react';
+import axios from 'axios';
+
+// Set the base URL from the environment variable (Vercel) or fallback to local proxy
+axios.defaults.baseURL = import.meta.env.VITE_API_URL || '';
 
 function App() {
   return (
